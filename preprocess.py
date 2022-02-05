@@ -92,4 +92,4 @@ def prepare(in_dir, pixdim=(1.5, 1.5, 1.0), a_min=-200, a_max=200, spatial_size=
         test_ds = Dataset(data=test_files, transform=test_transforms)
         test_loader = DataLoader(test_ds, batch_size=1)
 
-        return train_loader, test_loader
+        return train_loader, test_loader    
