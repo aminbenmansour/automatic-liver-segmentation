@@ -1,5 +1,7 @@
 from monai.utils import first
 import matplotlib.pyplot as plt
+import numpy as np
+from tqdm import tqdm
 
 def show_patient(data, SLICE_NUMBER=1, train=True, test=False):
     """
@@ -40,3 +42,19 @@ def show_patient(data, SLICE_NUMBER=1, train=True, test=False):
         plt.title(f"seg {SLICE_NUMBER}")
         plt.imshow(view_test_patient["seg"][0, 0, :, :, SLICE_NUMBER])
         plt.show()
+
+
+def calculate_pixels(data):
+    val = np.zeros((1, 2))
+
+    for batch in tqdm(data):
+        batch_label = batch["seg"] != 0
+        _, count = np.unique(batch_label, return_counts=True)
+
+        if len(count) == 1:
+            count = np.append(count, 0)
+        val += count
+
+    print('The last values:', val)
+    return val
+
