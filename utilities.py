@@ -1,3 +1,4 @@
+from monai.utils import first
 import matplotlib.pyplot as plt
 
 def show_patient(data, SLICE_NUMBER=1, train=True, test=False):
