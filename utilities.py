@@ -1,7 +1,23 @@
 from monai.utils import first
 import matplotlib.pyplot as plt
+import torch
 import numpy as np
 from tqdm import tqdm
+
+
+def calculate_weights(bg, fg):
+    '''
+    In this function we take the number of the background and the forgroud pixels to return the `weights` 
+    for the cross entropy loss values.
+    '''
+    count = np.array([bg, fg])
+    summ = count.sum()
+    weights = count/summ
+    weights = 1/weights
+    summ = weights.sum()
+    weights = weights/summ
+    return torch.tensor(weights, dtype=torch.float32)
+
 
 def show_patient(data, SLICE_NUMBER=1, train=True, test=False):
     """
