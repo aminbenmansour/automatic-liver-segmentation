@@ -1,9 +1,20 @@
 from monai.utils import first
 import matplotlib.pyplot as plt
 import torch
+
+from monai.losses import DiceLoss
+
 import numpy as np
 from tqdm import tqdm
 
+def dice_metric(predicted, target):
+    '''
+    In this function we take `predicted` and `target` (label) to calculate the dice coeficient then we use it 
+    to calculate a metric value for the training and the validation.
+    '''
+    dice_value = DiceLoss(to_onehot_y=True, sigmoid=True, squared_pred=True)
+    value = 1 - dice_value(predicted, target).item()
+    return value
 
 def calculate_weights(bg, fg):
     '''
