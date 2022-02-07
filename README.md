@@ -28,6 +28,10 @@ The illustration below shows the architecture of the U-Net
   <img src="https://user-images.githubusercontent.com/50111205/152804685-70b35b1b-f368-411f-a3a2-a79b3094108b.png" alt="Convolutional-neural-network-CNN-architecture-based-on-UNET-Ronneberger-et-al"/>
 </p>
 
+# Usage
+```
+pip install -r requirements.txt
+```
 
 # Datasets
 
