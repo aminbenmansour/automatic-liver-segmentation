@@ -49,14 +49,18 @@ For this project we used the following technologies.
 ```
 pip install -r requirements.txt
 ```
+# Software
+[3D Slicer](https://www.slicer.org/): solve advanced image computing challenges with a focus on clinical and biomedical applications.
+
+The software was extensively used during the data preparation hook. it is useful for **converting NifTI files to DICOM** and **labeling (manually segmenting) the non-annotated data**.
+
+  <img width="20%" height="auto" style="float: left;" src="https://user-images.githubusercontent.com/50111205/152821465-41f497ad-2407-429b-9f7f-ce5f71ac2788.svg" alt= "3D-Slicer-Mark">
 
 # Datasets
 
-[Decathlon dataset](https://drive.google.com/drive/folders/1HqEgzS8BV2c7xYNrZdEAnrHk7osJJ--2), choosing Task 3, the liver
+[Decathlon dataset](https://drive.google.com/drive/folders/1HqEgzS8BV2c7xYNrZdEAnrHk7osJJ--2), *labeled*
 
-[Liver Tumor Segmentation - Part 1](https://www.kaggle.com/andrewmvd/liver-tumor-segmentation).
+[Liver Tumor Segmentation - Part 1](https://www.kaggle.com/andrewmvd/liver-tumor-segmentation), *unlabeled*
 
-[Liver Tumor Segmentation - Part 2](https://www.kaggle.com/andrewmvd/liver-tumor-segmentation-part-2).
+[Liver Tumor Segmentation - Part 2](https://www.kaggle.com/andrewmvd/liver-tumor-segmentation-part-2), *unlabeled*
 
-
-I personnaly tried the decathlon dataset it is recommended by the pytorch team but kaggle datasets are pretty interesting too.
