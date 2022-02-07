@@ -5,7 +5,9 @@ from monai.losses import DiceLoss, DiceCELoss
 
 import torch
 from torch.optim import Adam
+
 from preporcess import prepare
+from utilities import train
 
 data_dir = './datasets/Data_Train_Test'
 model_dir = './results/' 
@@ -27,3 +29,6 @@ model = UNet(
 loss_function = DiceLoss(to_onehot_y=True, sigmoid=True, squared_pred=True)
 
 optimizer = Adam(model.parameters(), 1e-5, weight_decay=1e-5, amsgrad=True)
+
+if __name__ == '__main__':
+    train(model, data_in, loss_function, optimizer, 600, model_dir)
