@@ -44,17 +44,17 @@ For this project we used the following technologies.
 
   <img width="20%" height="auto" style="float: left;" src="https://user-images.githubusercontent.com/50111205/152818452-8214c746-9c8d-4266-9323-bab7877ea116.png" alt= "Pytorch_logo">
 
-
-# Usage
-```
-pip install -r requirements.txt
-```
 # Software
 [3D Slicer](https://www.slicer.org/): solve advanced image computing challenges with a focus on clinical and biomedical applications.
 
 The software was extensively used during the data preparation hook. it is useful for **converting NifTI files to DICOM** and **labeling (manually segmenting) the non-annotated data**.
 
   <img width="20%" height="auto" style="float: left;" src="https://user-images.githubusercontent.com/50111205/152821465-41f497ad-2407-429b-9f7f-ce5f71ac2788.svg" alt= "3D-Slicer-Mark">
+
+# Usage
+```
+pip install -r requirements.txt
+```
 
 # Datasets
 
