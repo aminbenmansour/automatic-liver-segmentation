@@ -4,6 +4,7 @@ from monai.networks.layers import Norm
 from monai.losses import DiceLoss, DiceCELoss
 
 import torch
+from torch.optim import Adam
 from preporcess import prepare
 
 data_dir = './datasets/Data_Train_Test'
@@ -24,3 +25,5 @@ model = UNet(
 
 # loss_function = DiceCELoss(to_onehot_y=True, sigmoid=True, squared_pred=True, ce_weight=calculate_weights(1792651250,2510860).to(device))
 loss_function = DiceLoss(to_onehot_y=True, sigmoid=True, squared_pred=True)
+
+optimizer = Adam(model.parameters(), 1e-5, weight_decay=1e-5, amsgrad=True)
