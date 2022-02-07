@@ -8,6 +8,14 @@ Deep learning can be used to detect diseases like cancer by finding tumor cells 
 
 The goal of this repository is to create a deep learning model to segment a liver from a public CT scan dataset. After completing this series, you will be able to create the same model that segments the liver, as well as use the same principle to segment other organs or tumors from CT scans or MRIs.
 
+# Segmentation
+
+Segmentation is one of various applications in computer vision. It does not only figure out the nature of the object (classifying) or draws a box around it (object detection), instead it adds a whole layer above the original DICOM file. both images has the same dimensions and the latter emphasizes the object we are working on.
+
+The picture below shows the difference between the techniques mentioned above.
+
+![1__MNNHEI2TjyX6R0dxGtsig](https://user-images.githubusercontent.com/50111205/152811779-bc681650-f473-46b0-bf75-61c9da7fd1c4.png)
+
 
 
 # U-Net (Model)
