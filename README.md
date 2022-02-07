@@ -28,6 +28,23 @@ The illustration below shows the architecture of the U-Net
   <img src="https://user-images.githubusercontent.com/50111205/152804685-70b35b1b-f368-411f-a3a2-a79b3094108b.png" alt="Convolutional-neural-network-CNN-architecture-based-on-UNET-Ronneberger-et-al"/>
 </p>
 
+# Stack
+
+Using frameworks is fundamental. using the right frameworks for the job could immensely simplify the job.
+
+For this project we used the following technologies.
+
+* [MONAI](https://monai.io/): Medical Open Networkfor Artificial Intelligence, provides domain-optimized foundational capabilities for developing healthcare imaging training workflows in a native PyTorch paradigm. Useful for image pre-processing.
+
+  <img width="20%" height="auto" style="float: left;" src="https://user-images.githubusercontent.com/50111205/152818445-364cbd51-e638-40f5-b3fb-8171d8ffd936.png" alt= "MONAI-logo-color">
+
+
+
+* [PyTorch](https://pytorch.org/): An open source machine learning framework that accelerates the path from research prototyping to production deployment. It takes care of the rest of the life hooks of the model.
+
+  <img width="20%" height="auto" style="float: left;" src="https://user-images.githubusercontent.com/50111205/152818452-8214c746-9c8d-4266-9323-bab7877ea116.png" alt= "Pytorch_logo">
+
+
 # Usage
 ```
 pip install -r requirements.txt
