@@ -1,11 +1,10 @@
 
 from monai.networks.nets import UNet
 from monai.networks.layers import Norm
-from monai.losses import DiceCELoss
+from monai.losses import DiceLoss, DiceCELoss
 
 import torch
 from preporcess import prepare
-from utilities import calculate_weights
 
 data_dir = './datasets/Data_Train_Test'
 model_dir = './results/' 
@@ -23,4 +22,5 @@ model = UNet(
     norm=Norm.BATCH,
 ).to(device)
 
-loss_function = DiceCELoss(to_onehot_y=True, sigmoid=True, squared_pred=True, ce_weight=calculate_weights(1792651250,2510860).to(device))
+# loss_function = DiceCELoss(to_onehot_y=True, sigmoid=True, squared_pred=True, ce_weight=calculate_weights(1792651250,2510860).to(device))
+loss_function = DiceLoss(to_onehot_y=True, sigmoid=True, squared_pred=True)
