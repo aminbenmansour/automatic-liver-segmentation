@@ -51,6 +51,10 @@ The software was extensively used during the data preparation hook. it is useful
 
   <img width="20%" height="auto" style="float: left;" src="https://user-images.githubusercontent.com/50111205/152821465-41f497ad-2407-429b-9f7f-ce5f71ac2788.svg" alt= "3D-Slicer-Mark">
 
+# Optimization
+
+Depending on the size of the dataset, training could take up to days. Using GPUs helps reduce the training time, we could either use paid services like colab pro or make use of our own GPU thanks to [cuda](https://developer.nvidia.com/cuda-toolkit) and [cudnn](https://developer.nvidia.com/cudnn).
+
 # Usage
 ```
 pip install -r requirements.txt
